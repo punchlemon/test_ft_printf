@@ -6,75 +6,33 @@
 /*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 09:10:31 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/14 14:18:27 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:30:32 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void	test_ft_printf_d_1(void)
+void	test_ft_printf_d_compare(int d)
 {
-	int	d;
-	int	res1;
-	int	res2;
+	printf(" | return = %d\n", ft_printf("ft_printf : [%d]", d));
+	printf(" | return = %d\n\n", printf("   printf : [%d]", d));
+}
 
+void	test_ft_printf_d(void)
+{
 	printf("\n-------- %%d test--------\n\n");
-	d = 0;
 	printf("0\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
-	d = 42;
+	test_ft_printf_d_compare(0);
 	printf("42\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
-	d = -42;
+	test_ft_printf_d_compare(42);
 	printf("-42\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
-}
-
-void	test_ft_printf_d_2(void)
-{
-	int	d;
-	int	res1;
-	int	res2;
-
-	d = INT_MAX - 1;
+	test_ft_printf_d_compare(-42);
 	printf("INT_MAX - 1\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
-	d = INT_MAX;
+	test_ft_printf_d_compare(INT_MAX - 1);
 	printf("INT_MAX\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
-}
-
-void	test_ft_printf_d_3(void)
-{
-	int	d;
-	int	res1;
-	int	res2;
-
-	d = INT_MIN + 1;
+	test_ft_printf_d_compare(INT_MAX);
 	printf("INT_MIN + 1\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
-	d = INT_MIN;
+	test_ft_printf_d_compare(INT_MIN + 1);
 	printf("INT_MIN\n");
-	res1 = ft_printf("ft_printf : [%d]", d);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%d]", d);
-	printf(" %d\n\n", res2);
+	test_ft_printf_d_compare(INT_MIN);
 }

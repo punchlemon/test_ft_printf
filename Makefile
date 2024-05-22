@@ -6,7 +6,7 @@
 #    By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/12 20:23:46 by retanaka          #+#    #+#              #
-#    Updated: 2024/05/14 14:00:50 by retanaka         ###   ########.fr        #
+#    Updated: 2024/05/22 17:58:53 by retanaka         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC_FILES			=	test_ft_printf_c \
 						test_ft_printf_x \
 						test_ft_printf_x_upper \
 						test_ft_printf_percentage \
+						test_ft_printf_mix \
 						main \
 
 SRC					=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_FILES)))

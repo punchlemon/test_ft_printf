@@ -6,7 +6,7 @@
 /*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 12:32:10 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/14 14:22:47 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:39:37 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 
 void	test_ft_printf_percentage(void)
 {
-	int	res1;
-	int	res2;
-
 	printf("\n-------- %%%% test--------\n\n");
-	res1 = ft_printf("ft_printf : [%%]");
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%%]");
-	printf(" %d\n\n", res2);
+	printf(" | return = %d\n", ft_printf("ft_printf : [%%]"));
+	printf(" | return = %d\n\n", printf("   printf : [%%]"));
 }

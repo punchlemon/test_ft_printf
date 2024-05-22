@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_printf_p.c                                 :+:      :+:    :+:   */
+/*   test_ft_printf_mix.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 09:10:31 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/22 17:50:35 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:59:23 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void	test_ft_printf_p_compare(void *p)
+void	test_ft_printf_mix(void)
 {
-	printf(" | return = %d\n", ft_printf("ft_printf : [%p]", p));
-	printf(" | return = %d\n\n", printf("   printf : [%p]", p));
-}
-
-void	test_ft_printf_p(void)
-{
-	printf("\n-------- %%p test--------\n\n");
-	printf("\"hello\" address\n");
-	test_ft_printf_p_compare("hello");
-	printf("\"\" address\n");
-	test_ft_printf_p_compare("");
-	printf("NULL address\n");
-	test_ft_printf_p_compare(NULL);
-	printf("0x10ff0a\n");
-	test_ft_printf_p_compare((void *)0x10ff0a);
+	printf("\n-------- mix test--------\n\n");
+	printf(" | return = %d\n", ft_printf("ft_printf : [%c%s%p%d%d%i%u%x%X]", 42, "42", NULL, 42, 42, 42, 42, 42, 42));
+	printf(" | return = %d\n\n", printf("   printf : [%c%s%p%d%d%i%u%x%X]", 42, "42", NULL, 42, 42, 42, 42, 42, 42));
+	printf(" | return = %d\n", ft_printf("ft_printf : [%d%d%d]", INT_MAX, INT_MIN, 0));
+	printf(" | return = %d\n\n", printf("   printf : [%d%d%d]", INT_MAX, INT_MIN, 0));
 }

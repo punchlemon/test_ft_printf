@@ -6,35 +6,25 @@
 /*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 09:10:31 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/14 14:18:02 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:50:08 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
+void	test_ft_printf_s_compare(char *s)
+{
+	printf(" | return = %d\n", ft_printf("ft_printf : [%s]", s));
+	printf(" | return = %d\n\n", printf("   printf : [%s]", s));
+}
+
 void	test_ft_printf_s(void)
 {
-	char	*s;
-	int		res1;
-	int		res2;
-
 	printf("\n-------- %%s test--------\n\n");
-	s = "hello";
-	printf("hello\n");
-	res1 = ft_printf("ft_printf : [%s]", s);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%s]", s);
-	printf(" %d\n\n", res2);
-	s = "";
-	printf("\"\"\n");
-	res1 = ft_printf("ft_printf : [%s]", s);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%s]", s);
-	printf(" %d\n\n", res2);
-	s = NULL;
-	printf("NULL\n");
-	res1 = ft_printf("ft_printf : [%s]", s);
-	printf(" %d\n", res1);
-	res2 = printf("   printf : [%s]", s);
-	printf(" %d\n\n", res2);
+	printf("\"hello\" address\n");
+	test_ft_printf_s_compare("hello");
+	printf("\"\" address\n");
+	test_ft_printf_s_compare("");
+	printf("NULL address\n");
+	test_ft_printf_s_compare(NULL);
 }

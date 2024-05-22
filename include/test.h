@@ -6,7 +6,7 @@
 /*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 10:16:28 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/14 14:17:22 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/22 17:54:34 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,13 @@
 int		ft_printf(const char *str, ...);
 void	test_ft_printf_c(void);
 void	test_ft_printf_s(void);
-void	test_ft_printf_p_1(void);
-void	test_ft_printf_p_2(void);
-void	test_ft_printf_d_1(void);
-void	test_ft_printf_d_2(void);
-void	test_ft_printf_d_3(void);
-void	test_ft_printf_i_1(void);
-void	test_ft_printf_i_2(void);
-void	test_ft_printf_i_3(void);
-void	test_ft_printf_u_1(void);
-void	test_ft_printf_u_2(void);
-void	test_ft_printf_u_3(void);
-void	test_ft_printf_x_1(void);
-void	test_ft_printf_x_2(void);
-void	test_ft_printf_x_3(void);
-void	test_ft_printf_x_upper_1(void);
-void	test_ft_printf_x_upper_2(void);
-void	test_ft_printf_x_upper_3(void);
+void	test_ft_printf_p(void);
+void	test_ft_printf_d(void);
+void	test_ft_printf_i(void);
+void	test_ft_printf_u(void);
+void	test_ft_printf_x(void);
+void	test_ft_printf_x_upper(void);
 void	test_ft_printf_percentage(void);
+void	test_ft_printf_mix(void);
 
 #endif
