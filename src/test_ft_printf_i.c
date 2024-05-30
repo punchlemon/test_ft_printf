@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   test_ft_printf_i.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
+/*   By: retanaka <retanaka@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 12:32:10 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/22 17:32:17 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/05/30 11:41:35 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
 void	test_ft_printf_i_compare(int i)
 {
 	printf(" | return = %d\n", ft_printf("ft_printf : [%i]", i));
