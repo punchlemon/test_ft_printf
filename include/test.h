@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <limits.h>
 
-int		ft_printf(const char *str, ...);
 void	test_ft_printf_c(void);
 void	test_ft_printf_s(void);
 void	test_ft_printf_p(void);
