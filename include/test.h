@@ -6,7 +6,7 @@
 /*   By: retanaka <retanaka@student.42.tokyo>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 10:16:28 by retanaka          #+#    #+#             */
-/*   Updated: 2024/05/22 17:54:34 by retanaka         ###   ########.fr       */
+/*   Updated: 2024/06/01 20:06:04 by retanaka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
+# include "ft_printf.h"
 
 void	test_ft_printf_c(void);
 void	test_ft_printf_s(void);
